@@ -15,15 +15,16 @@ def round(num):
         return int(float(num))
     if float(num)-int(float(num))>=0.5:
         return int(float(num))+1
-#encryptes message59
+#encryptes message
 def encryption(key):
-    alphabet='qrupwtiey-oax2fb3jml1szdc5gvhnk;#6^07(!$&)@%8*,.9-4?:_"/`-+'
+    alphabet='qrupwtiey-oax2fb3jml1szdc 5gvhnk;#6^07(!$&)@%8*,.9-4?:_"/`-+'
     string=input('Enter string: ')
     key=int(key)
     repeated=0
     for char  in string:
         spot=alphabet.find(char)
         lenght=len(alphabet)
+
         new=(spot+int(pow(key,key)))%lenght
         if repeated<len(string)-1:
             print(new,end=',')
@@ -32,13 +33,15 @@ def encryption(key):
             print(new)
 #decryptes message
 def decryption(list):
-    alphabet = 'qrupwtiey-oax2fb3jml1szdc5gvhnk;#6^07(!$&)@%8*,.9-4?:_"/`-+'
+    alphabet = 'qrupwtiey-oax2fb3jml1szdc 5gvhnk;#6^07(!$&)@%8*,.9-4?:_"/`-+'
     key=int(input('Enter key: '))
     decrypt_list=[]
     #appends what will happen to symbol after encryption
     for i in range(int(len(alphabet))):
-        decrypt_list.append(i+int(pow(key,key))%len(alphabet))
+        decrypt_list.append((i+pow(key,key))%len(alphabet))
     #compares indexes of both and checks the other list what's on that index
-    for list in list:
-        indexlist=int(decrypt_list.index(list))
-        print(alphabet[int(indexlist)],end='')
+    for i in list:
+        index_list=decrypt_list.index(i)
+        print(alphabet[index_list],end='')
+encryption(5)
+decryption((16,34,15,22))
