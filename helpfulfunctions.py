@@ -50,3 +50,8 @@ def quadratic_equation(a,b,c):
     x2=(-b-pow(pow(b,2)-4*a*c,0.5))/2*a
     print('First solution is',x1)
     print('Second solution is',x2)
+def factorial(n):
+    x=1
+    for i in range(1,n+1):
+        x*=i
+    print(x)
