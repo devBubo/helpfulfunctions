@@ -1,3 +1,4 @@
+from random import *
 #complex unit sqrt(-1)
 i = 1j
 j = 1j
@@ -50,8 +51,12 @@ def quadratic_equation(a,b,c):
     x2=(-b-pow(pow(b,2)-4*a*c,0.5))/2*a
     print('First solution is',x1)
     print('Second solution is',x2)
+#factorial
 def factorial(n):
     x=1
     for i in range(1,n+1):
         x*=i
     print(x)
+def dice():
+    i=randint(1,6)
+    print(i)
