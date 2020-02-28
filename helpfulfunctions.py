@@ -57,6 +57,16 @@ def factorial(n):
     for i in range(1,n+1):
         x*=i
     print(x)
+#throws a dice
 def dice():
     i=randint(1,6)
     print(i)
+def fibonacci(number):
+    a=0
+    b=1
+    c=0
+    for i in range(number-1):
+        c=b
+        b+=a
+        a=c
+    return a
