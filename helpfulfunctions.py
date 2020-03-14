@@ -1,4 +1,5 @@
 from random import *
+from math import *
 #complex unit sqrt(-1)
 i = 1j
 j = 1j
@@ -61,6 +62,7 @@ def factorial(n):
 def dice():
     i=randint(1,6)
     print(i)
+#fibonacci sequence
 def fibonacci(number):
     a=0
     b=1
@@ -70,3 +72,10 @@ def fibonacci(number):
         b+=a
         a=c
     return a
+#def cos in complex numbers
+def cosequals(number):
+    b=number*-2
+    x1 = (-b + pow(pow(b, 2) - 4 * 1 * 1, 0.5)) / 2
+    x2 = (-b - pow(pow(b, 2) - 4 * 1 * 1, 0.5)) / 2
+    print(log(x1)/j,'+ 2πn, n ∈ ℤ')
+    print(log(x2)/j,'+ 2πn, n ∈ ℤ')
